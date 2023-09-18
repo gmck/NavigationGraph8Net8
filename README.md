@@ -1,5 +1,7 @@
 ﻿# NavigationGraph8Net8 net8.0-android34
 
+Changed showSnackBar back to false;
+
 Readme for NavigationGraph8Net8 - 15 Sept, 2023.
 
 Net8.0 RC1 was released Sept 12, 2023.

@@ -58,7 +58,7 @@ namespace com.companyname.navigationgraph8net8
 
         
         // Just to demonstrate the use the SnackBarHelper class - make it true and you will see a SnackBar when the app starts.
-        private readonly bool showSnackBar = true;   
+        private bool showSnackBar = false;   
 
 
         #region OnCreate
@@ -398,6 +398,8 @@ namespace com.companyname.navigationgraph8net8
             string message = GetString(Resource.String.welcome_navigationgraph8net8) + " - Version: " + packageInfo.VersionName;
             if (showSnackBar)
                 SnackBarHelper.ShowSnackbar(navigationView!, message, 1);
+                
+            
         }
         #endregion
 
