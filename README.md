@@ -49,4 +49,4 @@ Please note that Microsoft.NET.ILLink.Tasks library is added automatically to th
 
 The project was successfully deployed to a Pixel 6 running Android 14 Beta.
 
-If have run into a couple of problems with my main app. As I overcome those problems, I'll add sample code to this app, to demonstrate the changes.
+I have run into a couple of problems with my main app. As I overcome those problems, I'll add sample code to this app, to demonstrate the changes.
