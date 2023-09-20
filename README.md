@@ -1,6 +1,9 @@
 ﻿# NavigationGraph8Net8 net8.0-android34
 
-Changed showSnackBar back to false;
+Readme for NavigationGraph8Net8 - 21 Sept, 2023.
+
+Added Fader4(),
+Changed showSnackBar back to false.
 
 Readme for NavigationGraph8Net8 - 15 Sept, 2023.
 

@@ -47,5 +47,12 @@
             PopExitAnimation = Resource.Animation.m3_motion_fade_exit;
         }
 
+        public static void Fader4()
+        {
+            EnterAnimation = Resource.Animation.fade_in;
+            ExitAnimation = Resource.Animation.fade_out;
+            PopEnterAnimation = Resource.Animation.fade_in;
+            PopExitAnimation = Resource.Animation.fade_out;
+        }
     }
 }

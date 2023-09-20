@@ -91,7 +91,7 @@ namespace com.companyname.navigationgraph8net8.Fragments
         public bool OnMenuItemSelected(IMenuItem menuItem)
         {
             if (!animateFragments)
-                AnimationResource.Fader3();
+                AnimationResource.Fader4();
             else
                 AnimationResource.Slider();
 

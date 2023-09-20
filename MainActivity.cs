@@ -217,7 +217,7 @@ namespace com.companyname.navigationgraph8net8
         {
             // Using Fader2 as the default as animateFragment is false by default - check AnimationResource.cs for different animations
             if (!animateFragments)
-                AnimationResource.Fader3();
+                AnimationResource.Fader4();
             else
                 AnimationResource.Slider();
 
@@ -229,6 +229,12 @@ namespace com.companyname.navigationgraph8net8
                     .SetPopExitAnim(AnimationResource.PopExitAnimation)
                     .SetPopUpTo(Resource.Id.home_fragment, false)     // Inclusive false, saveState true. saved state doesn't change anything.
                     .Build();
+
+
+            Log.Debug(logTag, "Navigate to - Enter Animation " + navOptions.EnterAnim.ToString());
+            Log.Debug(logTag, "Navigate to - Exit Animation " + navOptions.ExitAnim.ToString());
+            Log.Debug(logTag, "Navigate to - Pop Enter Animation " + navOptions.PopEnterAnim.ToString());
+            Log.Debug(logTag, "Navigate to - Pop Exit Animation " + navOptions.PopExitAnim.ToString());
 
             bool proceed = false;
 
@@ -270,7 +276,7 @@ namespace com.companyname.navigationgraph8net8
         {
             // Note NavigationBarView - not BottomNavigationView probably not what is expected. Note that BottomNavigationView inherits from NavigationBarView. See notes in NavigationGraph.docx
             if (!animateFragments)
-                AnimationResource.Fader3();
+                AnimationResource.Fader4();
             else
                 AnimationResource.Slider();
 

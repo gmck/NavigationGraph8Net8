@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0-android</TargetFramework>
     <SupportedOSPlatformVersion>25</SupportedOSPlatformVersion>
@@ -17,6 +17,8 @@
 		<PublishTrimmed>True</PublishTrimmed>
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="Resources\anim\fade_in.xml" />
+	  <None Remove="Resources\anim\fade_out.xml" />
 	  <None Remove="Resources\anim\slide_in_left.xml" />
 	  <None Remove="Resources\anim\slide_in_right.xml" />
 	  <None Remove="Resources\anim\slide_out_left.xml" />
