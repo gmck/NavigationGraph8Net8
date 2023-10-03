@@ -4,18 +4,18 @@
 
 	<item android:id="@+id/action_settings"
 		android:orderInCategory="100"
-		android:title="@string/action_settings"
+		android:title="@string/title_settings"
 		app:showAsAction="never" />
 
 	<item android:id="@+id/action_logfiles"
 		android:orderInCategory="102"
-		android:title="@string/action_logFilesMaintenance"
+		android:title="@string/title_logFilesMaintenance"
 		app:showAsAction="never" />
 	
 	
 	<item android:id="@+id/action_subscription_info"
 		android:orderInCategory="103"
-		android:title="@string/action_subscription_info"
+		android:title="@string/title_subscription_info"
 		app:showAsAction="never" />
 
 </menu>

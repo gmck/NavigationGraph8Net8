@@ -9,70 +9,60 @@
     <fragment
         android:id="@+id/home_fragment"
         android:name="com.companyname.navigationgraph8net8.fragments.HomeFragment"
-		android:label="Home 8 - Net8"
-        tools:layout="@layout/fragment_home" />
-	
-	<!--android:label="@string/menu_home"-->
+		android:label="@string/label_home"/>
 	
 	<fragment
         android:id="@+id/gallery_fragment"
         android:name="com.companyname.navigationgraph8net8.fragments.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:label="@string/label_gallery"/>
 
     <fragment
         android:id="@+id/slideshow_fragment"
         android:name="com.companyname.navigationgraph8net8.fragments.SlideshowFragment"
-		android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+		android:label="@string/label_slideshow"/>
 
 	<fragment
         android:id="@+id/widgets_fragment"
         android:name="com.companyname.navigationgraph8net8.fragments.MaterialWidgetsFragment"
-		android:label="@string/menu_widgets"
-        tools:layout="@layout/fragment_widgets" />
+		android:label="@string/label_widgets"/>
 
 	<fragment
         android:id="@+id/purchase_fragment"
         android:name="com.companyname.navigationgraph8net8.fragments.PurchaseFragment"
-		android:label="@string/menu_subscription_purchase"
-        tools:layout="@layout/fragment_purchase" />
+		android:label="@string/label_subscription_purchase"/>
 	<!--Top Destinations-->
 	
-	<!--not a top destination-->
+	
+	
+	<!--Not top destinations-->
 	<fragment
 		android:id="@+id/settingsFragment"
 		android:name="com.companyname.navigationgraph8net8.fragments.SettingsFragment"
-		android:label="Settings"/>
+		android:label="@string/label_settings"/>
 	
-	<!--not a top destination-->
 	<fragment		   
 	  android:id="@+id/maintenance_file_selection_fragment"
 	  android:name="com.companyname.navigationgraph8net8.fragments.MaintenanceFileSelectionFragment"
-	  android:label="File Maintenance"
-	  tools:layout="@layout/fragment_maintenance_file_selection"/>
+	  android:label="@string/label_file_maintenance"/>
 
-	<!--not a top destination-->
+	
 	<fragment
 		android:id="@+id/leaderboardpager_fragment"
 		android:name="com.companyname.navigationgraph8net8.fragments.LeaderboardPagerFragment"
-		android:label="Leaderboard"
-        tools:layout="@layout/fragment_holder_viewpager"/>
+		android:label="@string/label_leaderboard"/>
 	
-	<!--not a top destination-->
+	
 	<fragment
 		android:id="@+id/register_fragment"
 		android:name="com.companyname.navigationgraph8net8.fragments.RegisterFragment"
-		android:label="Register"
-        tools:layout="@layout/fragment_register"/>
+		android:label="@string/label_register"/>
 
-	<!--not a top destination-->
+	
 	<fragment
 		android:id="@+id/race_result_fragment"
 		android:name="com.companyname.navigationgraph8net8.fragments.RaceResultFragment"
-		android:label="Race Result"
-        tools:layout="@layout/fragment_race_result"/>
-
+		android:label="@string/label_race_result"/>
+	<!--Not top destinations-->
 	
 </navigation>
 

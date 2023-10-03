@@ -3,6 +3,7 @@ using Android.Views;
 using AndroidX.ConstraintLayout.Widget;
 using AndroidX.Core.View;
 using AndroidX.Fragment.App;
+using Google.Android.Material.Button;
 using Google.Android.Material.CheckBox;
 using Google.Android.Material.MaterialSwitch;
 
@@ -23,12 +24,27 @@ namespace com.companyname.navigationgraph8net8.Fragments
             widgetsConstraintLayout = view!.FindViewById<ConstraintLayout>(Resource.Id.widgets_constraint);
             MaterialCheckBox? materialCheckBox = view!.FindViewById<MaterialCheckBox>(Resource.Id.checkBox1);
             MaterialSwitch? materialSwitch = view.FindViewById<MaterialSwitch>(Resource.Id.switch1);
-
+            MaterialButton? materialButton = view.FindViewById<MaterialButton>(Resource.Id.button1);
             ViewCompat.SetOnApplyWindowInsetsListener(widgetsConstraintLayout!, this);
             initialPaddingBottom = widgetsConstraintLayout!.PaddingBottom;
 
             materialCheckBox!.Checked = true;
             materialSwitch!.Checked = true;
+
+            materialButton!.Click += (sender, e) =>
+                {
+                    if (materialCheckBox.Checked)
+                    {
+                        materialCheckBox.Checked = false;
+                        materialSwitch.Checked = false;
+                    }
+                    else
+                    {
+                        materialCheckBox.Checked = true;
+                        materialSwitch.Checked = true;
+                    }
+                };
+
             return view;
         }
         #endregion

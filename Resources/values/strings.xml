@@ -1,21 +1,55 @@
 <resources>
 	<string name="app_name">NavigationGraph8Net8</string>
 	
+	
 	<string name="navigation_header_title">Android Navigator</string>
 	<string name="navigation_header_sub_title">How to navigate</string>
-	<string name="action_subscription_info">Subscription Information</string>
-	<string name="action_settings">Settings</string>
-	<string name="action_logFilesMaintenance">Maintenance - log files</string>
 	
-	<string name="menu_home">Home</string>
-	<string name="menu_gallery">Gallery</string>
-	<string name="menu_slideshow">Slideshow</string>
-	<string name="menu_widgets">Material3 Widgets</string>
-	<string name="menu_subscription_purchase">Purchase Subscription</string>
+	<!--Navigation Drawer menu titles-->
+	<string name="title_home">Home</string>
+	<string name="title_gallery">Gallery</string>
+	<string name="title_slideshow">Slideshow</string>
+	<string name="title_widgets">Material3 Widgets</string>
+	<string name="title_subscription_purchase">Purchase Subscription</string>
 
-	<string name="title_register">Register</string>
+	<!--Bottom Navigation Menu titles-->
 	<string name="title_leaderboard">Leaderboard</string>
-	<string name="title_speedo">Race Results</string>
+	<string name="title_register">Register</string>
+	<string name="title_race_results">Race Results</string>
+
+	<!--Home Fragment Menu titles-->
+	<string name="title_subscription_info">Subscription Information</string>
+	<string name="title_settings">Settings</string>
+	<string name="title_logFilesMaintenance">Maintenance - log files</string>
+
+
+	<!--MaintenanceFileSelectionFragment Menu Titles-->
+	<string name="title_toggle_files">Toogle File Selections</string>
+	<string name="title_show_diagnostic_files">Show Diagnostic files</string>
+	<string name="title_show_data_files">Show data files</string>
+	<string name="title_delete_files">Delete selected file(s)</string>
+	<string name="title_view_file">View selected file</string>
+	<string name="title_email_file">Email selected file</string>
+	<string name="title_copy_file">Copy selected file to storage</string>
+	<string name="title_get_permission">Obtain File Permissions</string>
+	<!--MaintenanceFileSelectionFragment-->
+	
+	
+	
+	<!--Top Destinations labels-->
+	<string name="label_home">Home 8 - Net8"</string>
+	<string name="label_gallery">Gallery</string>
+	<string name="label_slideshow">Slideshow</string>
+	<string name="label_widgets">Material3 Widgets</string>
+	<string name="label_subscription_purchase">Purchase Subscription</string>
+	
+	<!--NotTop Destinations labels-->
+	<string name="label_settings">Settings</string>
+	<string name="label_file_maintenance">File Maintenance</string>
+	<string name="label_register">Register</string>
+	<string name="label_leaderboard">Leaderboard</string>
+	<string name="label_race_result">Race Results</string>
+
 
 	<!--Preferences.xml-->
 	<string name ="generalCategoryTitle">General</string>
@@ -116,16 +150,7 @@
 	</string>
 	
 	
-	<!--MaintenanceFileSelectionFragment-->
-	<string name="action_toggle_files">Toogle File Selections</string>
-	<string name="action_show_diagnostic_files">Show Diagnostic files</string>
-	<string name="action_show_data_files">Show data files</string>
-	<string name="action_delete_files">Delete selected file(s)</string>
-	<string name="action_view_file">View selected file</string>
-	<string name="action_email_file">Email selected file</string>
-	<string name="action_copy_file">Copy selected file to storage</string>
-	<string name="action_get_permission">Obtain File Permissions</string>
-	<!--MaintenanceFileSelectionFragment-->
+	
 
 	<string name="show_diagnostic_files">Show Diagnostic files</string>
 	<string name="permission_for_files">You selected the Get Permissions menu Item</string>

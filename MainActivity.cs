@@ -323,13 +323,22 @@ namespace com.companyname.navigationgraph8net8
         #region OnDestinationChanged
         public void OnDestinationChanged(NavController navController, NavDestination navDestination, Bundle? bundle)
         {
-            CheckForPreferenceChanges();
+            // Seems to be a bug in NavigationView. The first menu item is not checked by default
+            // Therefore, the first fix was to manually check it as below.
+            // navigationView!.Menu!.FindItem(Resource.Id.home_fragment)!.SetChecked(navDestination.Id == Resource.Id.home_fragment);
+            
+            // At other times a menu item of the NavigationView is checked when it shouldn't, so it is possible to get two menu items checked at the same time
+            // The safest way to handle this is to uncheck all menu items and then check the one we want.
+            UnCheckAllMenuItems();
 
-            // The first menu item is not checked by default, so we need to check it to show it is selected on the startDestination fragment, i.e. the home_fragment
-            navigationView!.Menu!.FindItem(Resource.Id.home_fragment)!.SetChecked(navDestination.Id == Resource.Id.home_fragment);
+            // Also as OnDestinationChange is called for every fragment, we also need to consider that the the navDestination.Id may not be associated with the NavigationView and therfore we also need to check
+            // that the menuItem returned via FindMenu is not null before we check it.
+            navigationView!.Menu!.FindItem(navDestination.Id)?.SetChecked(true);
 
             // The slideshowFragment contains a BottomNavigationView. We only want to show the BottomNavigationView when the SlideshowFragment is displayed.
             bottomNavigationView!.Visibility = navDestination.Id == Resource.Id.slideshow_fragment ? ViewStates.Visible : ViewStates.Gone;
+
+            CheckForPreferenceChanges();
 
             // By default because the LeaderboardPagerFragment, RegisterFragment and MaintenanceFileSelectionFragment are not top level fragments,
             // they will default to showing an up button (left arrow) plus the title.
@@ -352,7 +361,35 @@ namespace com.companyname.navigationgraph8net8
             SetShortEdgesIfRequired(navDestination);
         }
         #endregion
-        
+
+        #region UnCheckAllMenuItems
+        private void UnCheckAllMenuItems()
+        {
+            int menuSize = navigationView!.Menu.Size();
+            for (int i = 0; i < menuSize; i++)
+                navigationView.Menu.GetItem(i)!.SetChecked(false);
+        }
+
+        // The NavigationView in the NavigationGraph8Net8 example is a very simple menu.
+        // If you have a more complex menu e.g. containing labels and dividers etc it will then have submenus, and you would then need to account for them using something like the following code.
+        //private void UnCheckAllMenuItems()
+        //{
+        //    int menuSize = navigationView!.Menu.Size();
+        //    for (int i = 0; i < menuSize; i++)
+        //    {
+        //        IMenuItem menuItem = navigationView.Menu.GetItem(i)!;
+        //        if (menuItem.SubMenu == null)
+        //            menuItem.SetChecked(false);
+        //        else
+        //        {
+        //            int subMenuSize = menuItem.SubMenu!.Size();
+        //            for (int j = 0; j < subMenuSize; j++)
+        //                menuItem.SubMenu.GetItem(j)!.SetChecked(false);
+        //        }
+        //    }
+        //}
+        #endregion
+
         #region CheckForPreferenceChanges
         private void CheckForPreferenceChanges()
         {

@@ -30,6 +30,6 @@
 	<item
 		android:id="@+id/race_result_fragment"
 		android:icon ="@drawable/ic_speedo1"
-		android:title ="@string/title_speedo"/>
+		android:title ="@string/title_race_results"/>
 	
 </menu>

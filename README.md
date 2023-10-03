@@ -1,5 +1,14 @@
 ﻿# NavigationGraph8Net8 net8.0-android34
 
+Readme for NavigationGraph8Net8 - 4 October, 2023.
+
+Added a click listener to the button in the MaterialWidgetsFragment to demonstrate a crash when built as a Release version. It doesn't crash when built as a Debug version and the click event works as the code suggests.
+
+The exception is java.lang.ClassNotFoundException: android.view.View_IOnClickListenerImplementor as reported in issue #8337. I suspect it can be fixed by adding the following to a proguard.cfg
+```
+-keep class android.view.View_IOnClickListenerImplementor
+-keep class android.view.View_IOnLongClickListenerImplementor
+```
 Readme for NavigationGraph8Net8 - 21 Sept, 2023.
 
 Added Fader4(),
