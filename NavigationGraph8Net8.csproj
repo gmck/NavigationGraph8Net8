@@ -17,6 +17,7 @@
 		<PublishTrimmed>True</PublishTrimmed>
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="proguard.cfg" />
 	  <None Remove="Resources\anim\fade_in.xml" />
 	  <None Remove="Resources\anim\fade_out.xml" />
 	  <None Remove="Resources\anim\slide_in_left.xml" />

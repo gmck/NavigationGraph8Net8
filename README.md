@@ -2,9 +2,17 @@
 
 Readme for NavigationGraph8Net8 - 4 October, 2023.
 
+Update:
+
+I've now added a proguard.cfg file with the two lines below to the project and can confirm the release build now runs without generating the exception.
+
+Original:
+
 Added a click listener to the button in the MaterialWidgetsFragment to demonstrate a crash when built as a Release version. It doesn't crash when built as a Debug version and the click event works as the code suggests.
 
 The exception is java.lang.ClassNotFoundException: android.view.View_IOnClickListenerImplementor as reported in issue #8337. I suspect it can be fixed by adding the following to a proguard.cfg
+
+The second line is not required, but in my app it also had an ItemLongClick event handler that also crashed with a similar excpetion in the release build. The second line fixed that crash.
 ```
 -keep class android.view.View_IOnClickListenerImplementor
 -keep class android.view.View_IOnLongClickListenerImplementor

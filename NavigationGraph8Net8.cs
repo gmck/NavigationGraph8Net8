@@ -78,6 +78,11 @@ namespace com.companyname.navigationgraph8net8
             Log.Debug(logTag, logTag+" OnActivityResumed");
         }
 
+        public void OnActivityRestoreInstanceState(Activity activity, Bundle? savedInstanceState)
+        {
+            Log.Debug(logTag, logTag+" OnActivityRestoreInstanceState");
+        }
+
         public void OnActivitySaveInstanceState(Activity activity, Bundle outState)
         {
             // Replaces the functionality of OnActivityDestroyed above, which only works if in Developer Options - App - Don't keep activities is in the On position, which most likely wouldn't be ON for a non developer user. 
