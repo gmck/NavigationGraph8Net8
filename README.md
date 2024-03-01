@@ -2,6 +2,13 @@
 
 Readme for NavigationGraph8Net8 - 4 October, 2023.
 
+Update: March 2, 2024
+
+Some very minor updates. Updated code in the MainActvity to remove some warnings. Modified a couple of Lists to use the newer simplified syntax for creating Lists.
+
+Really just needed to change something to test if my Github account is working properly after my GitHub CoPilot Chat suddenly stopped working when using VS 2022. Upgraded both VS's to 17.10.0 Prev 1.0. and 17.9.2 respectively. 
+
+
 Update:
 
 I've now added a proguard.cfg file with the two lines below to the project and can confirm the release build now runs without generating the exception.

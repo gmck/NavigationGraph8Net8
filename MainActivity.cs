@@ -87,11 +87,11 @@ namespace com.companyname.navigationgraph8net8
             navController = navHostFragment!.NavController;
 
             // These are the fragments that you don't wont the back button of the toolbar to display on e.g. topLevel fragments. They correspond to the items of the NavigationView.
-            int[] topLevelDestinationIds = new int[] { Resource.Id.home_fragment, Resource.Id.gallery_fragment, Resource.Id.slideshow_fragment, Resource.Id.widgets_fragment, Resource.Id.purchase_fragment };
+            int[] topLevelDestinationIds = [Resource.Id.home_fragment, Resource.Id.gallery_fragment, Resource.Id.slideshow_fragment, Resource.Id.widgets_fragment, Resource.Id.purchase_fragment];
             appBarConfiguration = new AppBarConfiguration.Builder(topLevelDestinationIds).SetOpenableLayout(drawerLayout).Build();  // SetDrawerLayout replaced with SetOpenableLayout
 
             // The following fragments are immersive fragments - see SetShortEdgesIfRequired
-            immersiveFragmentsDestinationIds = new List<int> { Resource.Id.race_result_fragment };
+            immersiveFragmentsDestinationIds = [Resource.Id.race_result_fragment];
 
             NavigationUI.SetupActionBarWithNavController(this, navController, appBarConfiguration);
 
@@ -435,10 +435,7 @@ namespace com.companyname.navigationgraph8net8
             if (OperatingSystem.IsAndroidVersionAtLeast(33))
                 packageInfo = packageManager.GetPackageInfo(PackageName!, PackageManager.PackageInfoFlags.Of(PackageInfoFlagsLong.None));
             else
-#pragma warning disable CS0618 // Type or member is obsolete
                 packageInfo = packageManager.GetPackageInfo(PackageName!, 0)!;
-#pragma warning restore CS0618 // Type or member is obsolete
-
             string message = GetString(Resource.String.welcome_navigationgraph8net8) + " - Version: " + packageInfo.VersionName;
             if (showSnackBar)
                 SnackBarHelper.ShowSnackbar(navigationView!, message, 1);
