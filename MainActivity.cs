@@ -58,7 +58,7 @@ namespace com.companyname.navigationgraph8net8
 
         
         // Just to demonstrate the use the SnackBarHelper class - make it true and you will see a SnackBar when the app starts.
-        private bool showSnackBar = false;   
+        private readonly bool showSnackBar = false;   
 
 
         #region OnCreate
@@ -87,7 +87,7 @@ namespace com.companyname.navigationgraph8net8
             navController = navHostFragment!.NavController;
 
             // These are the fragments that you don't wont the back button of the toolbar to display on e.g. topLevel fragments. They correspond to the items of the NavigationView.
-            int[] topLevelDestinationIds = [Resource.Id.home_fragment, Resource.Id.gallery_fragment, Resource.Id.slideshow_fragment, Resource.Id.widgets_fragment, Resource.Id.purchase_fragment];
+            int[] topLevelDestinationIds = [Resource.Id.home_fragment, Resource.Id.gallery_fragment, Resource.Id.books_fragment, Resource.Id.slideshow_fragment, Resource.Id.widgets_fragment, Resource.Id.purchase_fragment];
             appBarConfiguration = new AppBarConfiguration.Builder(topLevelDestinationIds).SetOpenableLayout(drawerLayout).Build();  // SetDrawerLayout replaced with SetOpenableLayout
 
             // The following fragments are immersive fragments - see SetShortEdgesIfRequired
@@ -126,7 +126,7 @@ namespace com.companyname.navigationgraph8net8
                 SetTopMargin(v, statusBarsInsets);
 
                 // Appear never to need displayCutout because it is always null
-                if (OperatingSystem.IsAndroidVersionAtLeast(28))
+                if (OperatingSystem.IsAndroidVersionAtLeast(29))
                 {
                     if (insets.DisplayCutout != null)
                         Window!.Attributes!.LayoutInDisplayCutoutMode = devicesWithNotchesAllowFullScreen ? LayoutInDisplayCutoutMode.ShortEdges : LayoutInDisplayCutoutMode.Default;
@@ -246,6 +246,7 @@ namespace com.companyname.navigationgraph8net8
                 // The menuitem highlight will stay on the current item and the current fragment will remain displayed, nor will the app crash.
                 case Resource.Id.home_fragment:
                 case Resource.Id.gallery_fragment:
+                case Resource.Id.books_fragment:
                 case Resource.Id.slideshow_fragment:
                 case Resource.Id.widgets_fragment:
                 case Resource.Id.purchase_fragment:

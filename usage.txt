@@ -6509,21 +6509,6 @@ androidx.recyclerview.widget.RecyclerView$State:
     static final int STEP_ANIMATIONS
     static final int STEP_LAYOUT
     static final int STEP_START
-androidx.recyclerview.widget.RecyclerView$ViewHolder:
-    static final int FLAG_ADAPTER_FULLUPDATE
-    static final int FLAG_ADAPTER_POSITION_UNKNOWN
-    static final int FLAG_APPEARED_IN_PRE_LAYOUT
-    static final int FLAG_BOUNCED_FROM_HIDDEN_LIST
-    static final int FLAG_BOUND
-    static final int FLAG_IGNORE
-    static final int FLAG_INVALID
-    static final int FLAG_MOVED
-    static final int FLAG_NOT_RECYCLABLE
-    static final int FLAG_REMOVED
-    static final int FLAG_RETURNED_FROM_SCRAP
-    static final int FLAG_TMP_DETACHED
-    static final int FLAG_UPDATE
-    static final int PENDING_ACCESSIBILITY_STATE_NOT_SET
 androidx.recyclerview.widget.RecyclerView:
     static final int DEFAULT_ORIENTATION
     static final boolean DISPATCH_TEMP_DETACH
@@ -15596,9 +15581,8 @@ androidx.appcompat.app.AppCompatDelegateImpl$1
 androidx.appcompat.app.AppCompatDelegateImpl$4
 androidx.appcompat.app.AppCompatDelegateImpl:
     private static boolean sInstalledExceptionHandler
-androidx.appcompat.app.ResourcesFlusher:
-    private static void flushLollipops(android.content.res.Resources)
-    private static void flushMarshmallows(android.content.res.Resources)
+androidx.appcompat.app.ResourcesFlusher$Api16Impl
+androidx.appcompat.app.ResourcesFlusher
 androidx.appcompat.graphics.drawable.AnimatedStateListDrawableCompat$1
 androidx.appcompat.graphics.drawable.AnimatedStateListDrawableCompat$AnimatableTransition
 androidx.appcompat.graphics.drawable.AnimatedStateListDrawableCompat$AnimatedStateListState
@@ -15654,6 +15638,10 @@ androidx.appcompat.widget.SearchView:
     private androidx.appcompat.widget.SearchView$OnQueryTextListener mOnQueryChangeListener
     private androidx.appcompat.widget.SearchView$OnSuggestionListener mOnSuggestionListener
 androidx.appcompat.widget.ThemedSpinnerAdapter
+androidx.appcompat.widget.TooltipCompatHandler$$InternalSyntheticLambda$1$990bd139c764fdd0af01d525cfae7cb46744c3b2435b7922b50af1bf6983d455$0
+androidx.appcompat.widget.TooltipCompatHandler$$InternalSyntheticLambda$1$990bd139c764fdd0af01d525cfae7cb46744c3b2435b7922b50af1bf6983d455$1
+androidx.appcompat.widget.TooltipCompatHandler
+androidx.appcompat.widget.TooltipPopup
 androidx.appcompat.widget.ViewStubCompat$OnInflateListener:
     public abstract void onInflate(androidx.appcompat.widget.ViewStubCompat,android.view.View)
 androidx.appcompat.widget.ViewStubCompat:
@@ -15785,19 +15773,29 @@ androidx.core.graphics.PaintCompat:
     private static androidx.core.util.Pair obtainEmptyRects()
 androidx.core.graphics.TypefaceCompat:
     private static android.graphics.Typeface getBestFontFromFamily(android.content.Context,android.graphics.Typeface,int)
+androidx.core.graphics.TypefaceCompatApi21Impl:
+    public android.graphics.Typeface createFromFontInfo(android.content.Context,android.os.CancellationSignal,androidx.core.provider.FontsContractCompat$FontInfo[],int)
+    private java.io.File getFile(android.os.ParcelFileDescriptor)
+androidx.core.graphics.TypefaceCompatApi24Impl
 androidx.core.graphics.TypefaceCompatApi29Impl:
     protected android.graphics.Typeface createFromInputStream(android.content.Context,java.io.InputStream)
 androidx.core.graphics.TypefaceCompatBaseImpl$2
 androidx.core.graphics.TypefaceCompatBaseImpl:
     private void addFontFamily(android.graphics.Typeface,androidx.core.content.res.FontResourcesParserCompat$FontFamilyFilesResourceEntry)
+    protected android.graphics.Typeface createFromInputStream(android.content.Context,java.io.InputStream)
     private androidx.core.content.res.FontResourcesParserCompat$FontFileResourceEntry findBestEntry(androidx.core.content.res.FontResourcesParserCompat$FontFamilyFilesResourceEntry,int)
     androidx.core.content.res.FontResourcesParserCompat$FontFamilyFilesResourceEntry getFontFamily(android.graphics.Typeface)
     private static long getUniqueKey(android.graphics.Typeface)
+androidx.core.graphics.TypefaceCompatUtil:
+    public static java.nio.ByteBuffer copyToDirectBuffer(android.content.Context,android.content.res.Resources,int)
+    private static java.nio.ByteBuffer mmap(java.io.File)
 androidx.core.graphics.drawable.DrawableCompat:
     private static java.lang.reflect.Method sGetLayoutDirectionMethod
     private static boolean sGetLayoutDirectionMethodFetched
     private static java.lang.reflect.Method sSetLayoutDirectionMethod
     private static boolean sSetLayoutDirectionMethodFetched
+androidx.core.graphics.drawable.IconCompat:
+    static android.graphics.Bitmap createLegacyIconFromAdaptiveIcon(android.graphics.Bitmap,boolean)
 androidx.core.graphics.drawable.TintAwareDrawable
 androidx.core.graphics.drawable.WrappedDrawableApi14
 androidx.core.graphics.drawable.WrappedDrawableApi21
@@ -15850,7 +15848,19 @@ androidx.core.view.ViewCompat:
     private static void compatOffsetTopAndBottom(android.view.View,int)
     private static android.graphics.Rect getEmptyTempRect()
     private static void tickleInvalidationFlag(android.view.View)
+androidx.core.view.ViewConfigurationCompat:
+    private static java.lang.reflect.Method sGetScaledScrollFactorMethod
+    private static float getLegacyScrollFactor(android.view.ViewConfiguration,android.content.Context)
+    public static int getScaledHoverSlop(android.view.ViewConfiguration)
 androidx.core.view.ViewPropertyAnimatorCompat$ViewPropertyAnimatorListenerApi14
+androidx.core.view.accessibility.AccessibilityNodeInfoCompat:
+    private static int sClickableSpanId
+    private void addSpanLocationToExtras(android.text.style.ClickableSpan,android.text.Spanned,int)
+    private void clearExtrasSpans()
+    private android.util.SparseArray getOrCreateSpansFromViewTags(android.view.View)
+    private android.util.SparseArray getSpansFromViewTags(android.view.View)
+    private int idForClickableSpan(android.text.style.ClickableSpan,android.util.SparseArray)
+    private void removeCollectedSpans(android.view.View)
 androidx.core.view.animation.PathInterpolatorApi14
 androidx.core.view.inputmethod.EditorInfoCompat:
     public static java.lang.String[] getContentMimeTypes(android.view.inputmethod.EditorInfo)
@@ -16081,6 +16091,7 @@ com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$On
     public abstract void onHidden(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
     public abstract void onShown(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
     public abstract void onShrunken(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
+com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$5
 com.google.android.material.floatingactionbutton.FloatingActionButtonImpl:
     com.google.android.material.shape.MaterialShapeDrawable createShapeDrawable()
 com.google.android.material.internal.StateListAnimator:

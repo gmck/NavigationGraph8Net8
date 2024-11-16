@@ -135,7 +135,7 @@ namespace com.companyname.navigationgraph8net8.Fragments
                         if (BluetoothPermissionsGranted())
                             Navigation.FindNavController(Activity!, Resource.Id.nav_host).Navigate(Resource.Id.settingsFragment, null, navOptions);
                         else
-                            ActivityCompat.RequestPermissions(Activity!, new string[] { Manifest.Permission.BluetoothConnect, Manifest.Permission.BluetoothScan }, BLUETOOTH_PERMISSIONS_REQUEST_CODE);
+                            ActivityCompat.RequestPermissions(Activity!, [Manifest.Permission.BluetoothConnect, Manifest.Permission.BluetoothScan], BLUETOOTH_PERMISSIONS_REQUEST_CODE);
                     }
                     else
                         Navigation.FindNavController(Activity!, Resource.Id.nav_host).Navigate(Resource.Id.settingsFragment, null, navOptions);
@@ -170,7 +170,7 @@ namespace com.companyname.navigationgraph8net8.Fragments
         {
             if (OperatingSystem.IsAndroidVersionAtLeast(31))
             {
-                string[] permissions = { Manifest.Permission.BluetoothConnect, Manifest.Permission.BluetoothScan };
+                string[] permissions = [Manifest.Permission.BluetoothConnect, Manifest.Permission.BluetoothScan];
                 return permissions.All(permission => AndroidX.Core.Content.ContextCompat.CheckSelfPermission(Context!, permission) == Permission.Granted);
             }
             return false;

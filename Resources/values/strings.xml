@@ -8,6 +8,7 @@
 	<!--Navigation Drawer menu titles-->
 	<string name="title_home">Home</string>
 	<string name="title_gallery">Gallery</string>
+	<string name="title_books">Books</string>
 	<string name="title_slideshow">Slideshow</string>
 	<string name="title_widgets">Material3 Widgets</string>
 	<string name="title_subscription_purchase">Purchase Subscription</string>
@@ -39,6 +40,7 @@
 	<!--Top Destinations labels-->
 	<string name="label_home">Home 8 - Net8"</string>
 	<string name="label_gallery">Gallery</string>
+	<string name="label_books">Books</string>
 	<string name="label_slideshow">Slideshow</string>
 	<string name="label_widgets">Material3 Widgets</string>
 	<string name="label_subscription_purchase">Purchase Subscription</string>
@@ -176,5 +178,18 @@
 	<!--BluetoothConfirmationDialogFragment -->
 
 	<string name="welcome_navigationgraph8net8">Welcome NavigationGraph8Net8</string>
+
+	<!--BooksFragment Menu Titles-->
+	<string name="title_sort_by_title">Sort by Title</string>
+	<string name="title_sort_by_author">Sort by Author</string>
+	<string name="title_sort_by_release_date">Sort by Release Date</string>
+	<string name="title_sort_by_original_order">Sort by Original Order</string>
+
+	<!--BooksFragment-->
+	<string name="title">Title</string>
+	<string name="author">Author</string>
+	<string name="release_date">Release Date</string>
+	<string name="sort_order_key">sort_order_key</string>
+	<!--BooksFragment-->
 	
 </resources>

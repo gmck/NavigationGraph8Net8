@@ -4838,6 +4838,637 @@
 -keepclassmembers class androidx.fragment.app.strictmode.Violation {
 }
 
+# ACW for Xamarin.AndroidX.RecyclerView
+-keep class androidx.recyclerview.widget.LinearLayoutManager
+-keepclassmembers class androidx.recyclerview.widget.LinearLayoutManager {
+   <init>(...);
+   <init>(...);
+   <init>(...);
+   *** getInitialPrefetchItemCount(...);
+   *** setInitialPrefetchItemCount(...);
+   *** isLayoutRTL(...);
+   *** getOrientation(...);
+   *** setOrientation(...);
+   *** getRecycleChildrenOnDetach(...);
+   *** setRecycleChildrenOnDetach(...);
+   *** getReverseLayout(...);
+   *** setReverseLayout(...);
+   *** isSmoothScrollbarEnabled(...);
+   *** setSmoothScrollbarEnabled(...);
+   *** getStackFromEnd(...);
+   *** setStackFromEnd(...);
+   *** calculateExtraLayoutSpace(...);
+   *** computeScrollVectorForPosition(...);
+   *** findFirstCompletelyVisibleItemPosition(...);
+   *** findFirstVisibleItemPosition(...);
+   *** findLastCompletelyVisibleItemPosition(...);
+   *** findLastVisibleItemPosition(...);
+   *** generateDefaultLayoutParams(...);
+   *** getExtraLayoutSpace(...);
+   *** prepareForDrop(...);
+   *** scrollToPositionWithOffset(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$Adapter$StateRestorationPolicy
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$Adapter$StateRestorationPolicy {
+   *** valueOf(...);
+   *** values(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$Adapter
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$Adapter {
+   <init>(...);
+   *** hasObservers(...);
+   *** hasStableIds(...);
+   *** setHasStableIds(...);
+   *** getItemCount(...);
+   *** bindViewHolder(...);
+   *** createViewHolder(...);
+   *** findRelativeAdapterPositionIn(...);
+   *** getItemId(...);
+   *** getItemViewType(...);
+   *** getStateRestorationPolicy(...);
+   *** notifyDataSetChanged(...);
+   *** notifyItemChanged(...);
+   *** notifyItemChanged(...);
+   *** notifyItemInserted(...);
+   *** notifyItemMoved(...);
+   *** notifyItemRangeChanged(...);
+   *** notifyItemRangeChanged(...);
+   *** notifyItemRangeInserted(...);
+   *** notifyItemRangeRemoved(...);
+   *** notifyItemRemoved(...);
+   *** onAttachedToRecyclerView(...);
+   *** onBindViewHolder(...);
+   *** onBindViewHolder(...);
+   *** onCreateViewHolder(...);
+   *** onDetachedFromRecyclerView(...);
+   *** onFailedToRecycleView(...);
+   *** onViewAttachedToWindow(...);
+   *** onViewDetachedFromWindow(...);
+   *** onViewRecycled(...);
+   *** registerAdapterDataObserver(...);
+   *** setStateRestorationPolicy(...);
+   *** unregisterAdapterDataObserver(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$Adapter
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$Adapter {
+   *** getItemCount(...);
+   *** onBindViewHolder(...);
+   *** onCreateViewHolder(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$AdapterDataObserver
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$AdapterDataObserver {
+   <init>(...);
+   *** onChanged(...);
+   *** onItemRangeChanged(...);
+   *** onItemRangeChanged(...);
+   *** onItemRangeInserted(...);
+   *** onItemRangeMoved(...);
+   *** onItemRangeRemoved(...);
+   *** onStateRestorationPolicyChanged(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$AdapterDataObserver
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$AdapterDataObserver {
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$ChildDrawingOrderCallback
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$ChildDrawingOrderCallback {
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$EdgeEffectFactory
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$EdgeEffectFactory {
+   <init>(...);
+   *** createEdgeEffect(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$ItemAnimator$ItemAnimatorFinishedListener
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$ItemAnimator$ItemAnimatorFinishedListener {
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$ItemAnimator$ItemHolderInfo
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$ItemAnimator$ItemHolderInfo {
+   <init>(...);
+   *** setFrom(...);
+   *** setFrom(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$ItemAnimator
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$ItemAnimator {
+   <init>(...);
+   *** getAddDuration(...);
+   *** setAddDuration(...);
+   *** getChangeDuration(...);
+   *** setChangeDuration(...);
+   *** isRunning(...);
+   *** getMoveDuration(...);
+   *** setMoveDuration(...);
+   *** getRemoveDuration(...);
+   *** setRemoveDuration(...);
+   *** animateAppearance(...);
+   *** animateChange(...);
+   *** animateDisappearance(...);
+   *** animatePersistence(...);
+   *** canReuseUpdatedViewHolder(...);
+   *** canReuseUpdatedViewHolder(...);
+   *** dispatchAnimationFinished(...);
+   *** dispatchAnimationStarted(...);
+   *** dispatchAnimationsFinished(...);
+   *** endAnimation(...);
+   *** endAnimations(...);
+   *** isRunning(...);
+   *** obtainHolderInfo(...);
+   *** onAnimationFinished(...);
+   *** onAnimationStarted(...);
+   *** recordPostLayoutInformation(...);
+   *** recordPreLayoutInformation(...);
+   *** runPendingAnimations(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$ItemAnimator
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$ItemAnimator {
+   *** isRunning(...);
+   *** animateAppearance(...);
+   *** animateChange(...);
+   *** animateDisappearance(...);
+   *** animatePersistence(...);
+   *** endAnimation(...);
+   *** endAnimations(...);
+   *** runPendingAnimations(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$ItemDecoration
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$ItemDecoration {
+   <init>(...);
+   *** getItemOffsets(...);
+   *** getItemOffsets(...);
+   *** onDraw(...);
+   *** onDraw(...);
+   *** onDrawOver(...);
+   *** onDrawOver(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$ItemDecoration
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$ItemDecoration {
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$LayoutManager$LayoutPrefetchRegistry
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$LayoutManager$LayoutPrefetchRegistry {
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$LayoutManager$Properties
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$LayoutManager$Properties {
+   <init>(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$LayoutManager
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$LayoutManager {
+   <init>(...);
+   *** isAutoMeasureEnabled(...);
+   *** setAutoMeasureEnabled(...);
+   *** getBaseline(...);
+   *** getChildCount(...);
+   *** getClipToPadding(...);
+   *** getFocusedChild(...);
+   *** hasFocus(...);
+   *** getHeight(...);
+   *** getHeightMode(...);
+   *** isAttachedToWindow(...);
+   *** isFocused(...);
+   *** isSmoothScrolling(...);
+   *** getItemCount(...);
+   *** isItemPrefetchEnabled(...);
+   *** setItemPrefetchEnabled(...);
+   *** getLayoutDirection(...);
+   *** isMeasurementCacheEnabled(...);
+   *** setMeasurementCacheEnabled(...);
+   *** getMinimumHeight(...);
+   *** getMinimumWidth(...);
+   *** getPaddingBottom(...);
+   *** getPaddingEnd(...);
+   *** getPaddingLeft(...);
+   *** getPaddingRight(...);
+   *** getPaddingStart(...);
+   *** getPaddingTop(...);
+   *** getWidth(...);
+   *** getWidthMode(...);
+   *** addDisappearingView(...);
+   *** addDisappearingView(...);
+   *** addView(...);
+   *** addView(...);
+   *** assertInLayoutOrScroll(...);
+   *** assertNotInLayoutOrScroll(...);
+   *** attachView(...);
+   *** attachView(...);
+   *** attachView(...);
+   *** calculateItemDecorationsForChild(...);
+   *** canScrollHorizontally(...);
+   *** canScrollVertically(...);
+   *** checkLayoutParams(...);
+   *** chooseSize(...);
+   *** collectAdjacentPrefetchPositions(...);
+   *** collectInitialPrefetchPositions(...);
+   *** computeHorizontalScrollExtent(...);
+   *** computeHorizontalScrollOffset(...);
+   *** computeHorizontalScrollRange(...);
+   *** computeVerticalScrollExtent(...);
+   *** computeVerticalScrollOffset(...);
+   *** computeVerticalScrollRange(...);
+   *** detachAndScrapAttachedViews(...);
+   *** detachAndScrapView(...);
+   *** detachAndScrapViewAt(...);
+   *** detachView(...);
+   *** detachViewAt(...);
+   *** endAnimation(...);
+   *** findContainingItemView(...);
+   *** findViewByPosition(...);
+   *** generateDefaultLayoutParams(...);
+   *** generateLayoutParams(...);
+   *** generateLayoutParams(...);
+   *** getBottomDecorationHeight(...);
+   *** getChildAt(...);
+   *** getChildMeasureSpec(...);
+   *** getChildMeasureSpec(...);
+   *** getColumnCountForAccessibility(...);
+   *** getDecoratedBottom(...);
+   *** getDecoratedBoundsWithMargins(...);
+   *** getDecoratedLeft(...);
+   *** getDecoratedMeasuredHeight(...);
+   *** getDecoratedMeasuredWidth(...);
+   *** getDecoratedRight(...);
+   *** getDecoratedTop(...);
+   *** getItemViewType(...);
+   *** getLeftDecorationWidth(...);
+   *** getPosition(...);
+   *** getProperties(...);
+   *** getRightDecorationWidth(...);
+   *** getRowCountForAccessibility(...);
+   *** getSelectionModeForAccessibility(...);
+   *** getTopDecorationHeight(...);
+   *** getTransformedBoundingBox(...);
+   *** ignoreView(...);
+   *** isLayoutHierarchical(...);
+   *** isViewPartiallyVisible(...);
+   *** layoutDecorated(...);
+   *** layoutDecoratedWithMargins(...);
+   *** measureChild(...);
+   *** measureChildWithMargins(...);
+   *** moveView(...);
+   *** offsetChildrenHorizontal(...);
+   *** offsetChildrenVertical(...);
+   *** onAdapterChanged(...);
+   *** onAddFocusables(...);
+   *** onAttachedToWindow(...);
+   *** onDetachedFromWindow(...);
+   *** onDetachedFromWindow(...);
+   *** onFocusSearchFailed(...);
+   *** onInitializeAccessibilityEvent(...);
+   *** onInitializeAccessibilityEvent(...);
+   *** onInitializeAccessibilityNodeInfo(...);
+   *** onInitializeAccessibilityNodeInfoForItem(...);
+   *** onInterceptFocusSearch(...);
+   *** onItemsAdded(...);
+   *** onItemsChanged(...);
+   *** onItemsMoved(...);
+   *** onItemsRemoved(...);
+   *** onItemsUpdated(...);
+   *** onItemsUpdated(...);
+   *** onLayoutChildren(...);
+   *** onLayoutCompleted(...);
+   *** onMeasure(...);
+   *** onRequestChildFocus(...);
+   *** onRequestChildFocus(...);
+   *** onRestoreInstanceState(...);
+   *** onSaveInstanceState(...);
+   *** onScrollStateChanged(...);
+   *** performAccessibilityAction(...);
+   *** performAccessibilityActionForItem(...);
+   *** postOnAnimation(...);
+   *** removeAllViews(...);
+   *** removeAndRecycleAllViews(...);
+   *** removeAndRecycleView(...);
+   *** removeAndRecycleViewAt(...);
+   *** removeCallbacks(...);
+   *** removeDetachedView(...);
+   *** removeView(...);
+   *** removeViewAt(...);
+   *** requestChildRectangleOnScreen(...);
+   *** requestChildRectangleOnScreen(...);
+   *** requestLayout(...);
+   *** requestSimpleAnimationsInNextLayout(...);
+   *** scrollHorizontallyBy(...);
+   *** scrollToPosition(...);
+   *** scrollVerticallyBy(...);
+   *** setMeasuredDimension(...);
+   *** setMeasuredDimension(...);
+   *** smoothScrollToPosition(...);
+   *** startSmoothScroll(...);
+   *** stopIgnoringView(...);
+   *** supportsPredictiveItemAnimations(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$LayoutManager
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$LayoutManager {
+   *** generateDefaultLayoutParams(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$LayoutParams
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$LayoutParams {
+   <init>(...);
+   <init>(...);
+   <init>(...);
+   <init>(...);
+   <init>(...);
+   *** getAbsoluteAdapterPosition(...);
+   *** getBindingAdapterPosition(...);
+   *** isItemChanged(...);
+   *** isItemRemoved(...);
+   *** isViewInvalid(...);
+   *** getViewAdapterPosition(...);
+   *** getViewLayoutPosition(...);
+   *** getViewPosition(...);
+   *** viewNeedsUpdate(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$OnChildAttachStateChangeListener
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$OnChildAttachStateChangeListener {
+}
+
+-keep class mono.androidx.recyclerview.widget.RecyclerView_OnChildAttachStateChangeListenerImplementor
+-keepclassmembers class mono.androidx.recyclerview.widget.RecyclerView_OnChildAttachStateChangeListenerImplementor {
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$OnFlingListener
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$OnFlingListener {
+   <init>(...);
+   *** onFling(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$OnFlingListener
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$OnFlingListener {
+   *** onFling(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$OnItemTouchListener
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$OnItemTouchListener {
+}
+
+-keep class mono.androidx.recyclerview.widget.RecyclerView_OnItemTouchListenerImplementor
+-keepclassmembers class mono.androidx.recyclerview.widget.RecyclerView_OnItemTouchListenerImplementor {
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$OnScrollListener
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$OnScrollListener {
+   <init>(...);
+   *** onScrollStateChanged(...);
+   *** onScrolled(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$OnScrollListener
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$OnScrollListener {
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$RecycledViewPool
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$RecycledViewPool {
+   <init>(...);
+   *** clear(...);
+   *** getRecycledView(...);
+   *** getRecycledViewCount(...);
+   *** putRecycledView(...);
+   *** setMaxRecycledViews(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$Recycler
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$Recycler {
+   <init>(...);
+   *** getScrapList(...);
+   *** bindViewToPosition(...);
+   *** clear(...);
+   *** convertPreLayoutPositionToPostLayout(...);
+   *** getViewForPosition(...);
+   *** recycleView(...);
+   *** setViewCacheSize(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$RecyclerListener
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$RecyclerListener {
+}
+
+-keep class mono.androidx.recyclerview.widget.RecyclerView_RecyclerListenerImplementor
+-keepclassmembers class mono.androidx.recyclerview.widget.RecyclerView_RecyclerListenerImplementor {
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$SmoothScroller$Action
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$SmoothScroller$Action {
+   <init>(...);
+   <init>(...);
+   <init>(...);
+   *** getDuration(...);
+   *** setDuration(...);
+   *** getDx(...);
+   *** setDx(...);
+   *** getDy(...);
+   *** setDy(...);
+   *** getInterpolator(...);
+   *** setInterpolator(...);
+   *** jumpTo(...);
+   *** update(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$SmoothScroller
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$SmoothScroller {
+   <init>(...);
+   *** getChildCount(...);
+   *** isPendingInitialRun(...);
+   *** isRunning(...);
+   *** getLayoutManager(...);
+   *** getTargetPosition(...);
+   *** setTargetPosition(...);
+   *** computeScrollVectorForPosition(...);
+   *** findViewByPosition(...);
+   *** getChildPosition(...);
+   *** instantScrollToPosition(...);
+   *** normalize(...);
+   *** onChildAttachedToWindow(...);
+   *** onSeekTargetStep(...);
+   *** onStart(...);
+   *** onStop(...);
+   *** onTargetFound(...);
+   *** stop(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$SmoothScroller
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$SmoothScroller {
+   *** onSeekTargetStep(...);
+   *** onStart(...);
+   *** onStop(...);
+   *** onTargetFound(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$State
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$State {
+   <init>(...);
+   *** hasTargetScrollPosition(...);
+   *** isMeasuring(...);
+   *** isPreLayout(...);
+   *** getItemCount(...);
+   *** getRemainingScrollHorizontal(...);
+   *** getRemainingScrollVertical(...);
+   *** getTargetScrollPosition(...);
+   *** didStructureChange(...);
+   *** get(...);
+   *** put(...);
+   *** remove(...);
+   *** willRunPredictiveAnimations(...);
+   *** willRunSimpleAnimations(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$ViewCacheExtension
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$ViewCacheExtension {
+   <init>(...);
+   *** getViewForPositionAndType(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$ViewCacheExtension
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$ViewCacheExtension {
+   *** getViewForPositionAndType(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$ViewHolder
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$ViewHolder {
+   <init>(...);
+   *** getAbsoluteAdapterPosition(...);
+   *** getAdapterPosition(...);
+   *** getBindingAdapter(...);
+   *** getBindingAdapterPosition(...);
+   *** isRecyclable(...);
+   *** setIsRecyclable(...);
+   *** getItemId(...);
+   *** getItemViewType(...);
+   *** getLayoutPosition(...);
+   *** getOldPosition(...);
+   *** getPosition(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView$ViewHolder
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView$ViewHolder {
+}
+
+-keep class androidx.recyclerview.widget.RecyclerView
+-keepclassmembers class androidx.recyclerview.widget.RecyclerView {
+   <init>(...);
+   <init>(...);
+   <init>(...);
+   *** getCompatAccessibilityDelegate(...);
+   *** hasFixedSize(...);
+   *** setHasFixedSize(...);
+   *** hasPendingAdapterUpdates(...);
+   *** isAnimating(...);
+   *** isComputingLayout(...);
+   *** isLayoutSuppressed(...);
+   *** getItemDecorationCount(...);
+   *** isLayoutFrozen(...);
+   *** setLayoutFrozen(...);
+   *** getMaxFlingVelocity(...);
+   *** getMinFlingVelocity(...);
+   *** getPreserveFocusAfterLayout(...);
+   *** setPreserveFocusAfterLayout(...);
+   *** getScrollState(...);
+   *** addFocusables(...);
+   *** addItemDecoration(...);
+   *** addItemDecoration(...);
+   *** addOnChildAttachStateChangeListener(...);
+   *** addOnItemTouchListener(...);
+   *** addOnScrollListener(...);
+   *** addRecyclerListener(...);
+   *** clearOnChildAttachStateChangeListeners(...);
+   *** clearOnScrollListeners(...);
+   *** computeHorizontalScrollExtent(...);
+   *** computeHorizontalScrollOffset(...);
+   *** computeHorizontalScrollRange(...);
+   *** computeVerticalScrollExtent(...);
+   *** computeVerticalScrollOffset(...);
+   *** computeVerticalScrollRange(...);
+   *** dispatchNestedPreScroll(...);
+   *** dispatchNestedScroll(...);
+   *** dispatchNestedScroll(...);
+   *** dispatchRestoreInstanceState(...);
+   *** dispatchSaveInstanceState(...);
+   *** drawChild(...);
+   *** findChildViewUnder(...);
+   *** findContainingItemView(...);
+   *** findContainingViewHolder(...);
+   *** findViewHolderForAdapterPosition(...);
+   *** findViewHolderForItemId(...);
+   *** findViewHolderForLayoutPosition(...);
+   *** findViewHolderForPosition(...);
+   *** fling(...);
+   *** getAdapter(...);
+   *** getChildAdapterPosition(...);
+   *** getChildItemId(...);
+   *** getChildLayoutPosition(...);
+   *** getChildPosition(...);
+   *** getChildViewHolder(...);
+   *** getDecoratedBoundsWithMargins(...);
+   *** getEdgeEffectFactory(...);
+   *** getItemAnimator(...);
+   *** getItemDecorationAt(...);
+   *** getLayoutManager(...);
+   *** getOnFlingListener(...);
+   *** getRecycledViewPool(...);
+   *** hasNestedScrollingParent(...);
+   *** invalidateItemDecorations(...);
+   *** nestedScrollBy(...);
+   *** offsetChildrenHorizontal(...);
+   *** offsetChildrenVertical(...);
+   *** onChildAttachedToWindow(...);
+   *** onChildDetachedFromWindow(...);
+   *** onDraw(...);
+   *** onLayout(...);
+   *** onScrollStateChanged(...);
+   *** onScrolled(...);
+   *** removeItemDecoration(...);
+   *** removeItemDecorationAt(...);
+   *** removeOnChildAttachStateChangeListener(...);
+   *** removeOnItemTouchListener(...);
+   *** removeOnScrollListener(...);
+   *** removeRecyclerListener(...);
+   *** scrollToPosition(...);
+   *** setAccessibilityDelegateCompat(...);
+   *** setAdapter(...);
+   *** setChildDrawingOrderCallback(...);
+   *** setDebugAssertionsEnabled(...);
+   *** setEdgeEffectFactory(...);
+   *** setItemAnimator(...);
+   *** setItemViewCacheSize(...);
+   *** setLayoutManager(...);
+   *** setOnFlingListener(...);
+   *** setOnScrollListener(...);
+   *** setRecycledViewPool(...);
+   *** setRecyclerListener(...);
+   *** setScrollingTouchSlop(...);
+   *** setVerboseLoggingEnabled(...);
+   *** setViewCacheExtension(...);
+   *** smoothScrollBy(...);
+   *** smoothScrollBy(...);
+   *** smoothScrollBy(...);
+   *** smoothScrollToPosition(...);
+   *** startNestedScroll(...);
+   *** stopNestedScroll(...);
+   *** stopScroll(...);
+   *** suppressLayout(...);
+   *** swapAdapter(...);
+}
+
+-keep class androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate
+-keepclassmembers class androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate {
+   <init>(...);
+   *** getItemDelegate(...);
+}
+
 # ACW for Xamarin.AndroidX.ViewPager2
 -keep class androidx.viewpager2.widget.ViewPager2$OnPageChangeCallback
 -keepclassmembers class androidx.viewpager2.widget.ViewPager2$OnPageChangeCallback {
@@ -5552,637 +6183,6 @@
    *** setTouchAnchorId(...);
    *** setTouchAnchorSide(...);
    *** setTouchRegionId(...);
-}
-
-# ACW for Xamarin.AndroidX.RecyclerView
--keep class androidx.recyclerview.widget.LinearLayoutManager
--keepclassmembers class androidx.recyclerview.widget.LinearLayoutManager {
-   <init>(...);
-   <init>(...);
-   <init>(...);
-   *** getInitialPrefetchItemCount(...);
-   *** setInitialPrefetchItemCount(...);
-   *** isLayoutRTL(...);
-   *** getOrientation(...);
-   *** setOrientation(...);
-   *** getRecycleChildrenOnDetach(...);
-   *** setRecycleChildrenOnDetach(...);
-   *** getReverseLayout(...);
-   *** setReverseLayout(...);
-   *** isSmoothScrollbarEnabled(...);
-   *** setSmoothScrollbarEnabled(...);
-   *** getStackFromEnd(...);
-   *** setStackFromEnd(...);
-   *** calculateExtraLayoutSpace(...);
-   *** computeScrollVectorForPosition(...);
-   *** findFirstCompletelyVisibleItemPosition(...);
-   *** findFirstVisibleItemPosition(...);
-   *** findLastCompletelyVisibleItemPosition(...);
-   *** findLastVisibleItemPosition(...);
-   *** generateDefaultLayoutParams(...);
-   *** getExtraLayoutSpace(...);
-   *** prepareForDrop(...);
-   *** scrollToPositionWithOffset(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$Adapter$StateRestorationPolicy
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$Adapter$StateRestorationPolicy {
-   *** valueOf(...);
-   *** values(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$Adapter
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$Adapter {
-   <init>(...);
-   *** hasObservers(...);
-   *** hasStableIds(...);
-   *** setHasStableIds(...);
-   *** getItemCount(...);
-   *** bindViewHolder(...);
-   *** createViewHolder(...);
-   *** findRelativeAdapterPositionIn(...);
-   *** getItemId(...);
-   *** getItemViewType(...);
-   *** getStateRestorationPolicy(...);
-   *** notifyDataSetChanged(...);
-   *** notifyItemChanged(...);
-   *** notifyItemChanged(...);
-   *** notifyItemInserted(...);
-   *** notifyItemMoved(...);
-   *** notifyItemRangeChanged(...);
-   *** notifyItemRangeChanged(...);
-   *** notifyItemRangeInserted(...);
-   *** notifyItemRangeRemoved(...);
-   *** notifyItemRemoved(...);
-   *** onAttachedToRecyclerView(...);
-   *** onBindViewHolder(...);
-   *** onBindViewHolder(...);
-   *** onCreateViewHolder(...);
-   *** onDetachedFromRecyclerView(...);
-   *** onFailedToRecycleView(...);
-   *** onViewAttachedToWindow(...);
-   *** onViewDetachedFromWindow(...);
-   *** onViewRecycled(...);
-   *** registerAdapterDataObserver(...);
-   *** setStateRestorationPolicy(...);
-   *** unregisterAdapterDataObserver(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$Adapter
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$Adapter {
-   *** getItemCount(...);
-   *** onBindViewHolder(...);
-   *** onCreateViewHolder(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$AdapterDataObserver
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$AdapterDataObserver {
-   <init>(...);
-   *** onChanged(...);
-   *** onItemRangeChanged(...);
-   *** onItemRangeChanged(...);
-   *** onItemRangeInserted(...);
-   *** onItemRangeMoved(...);
-   *** onItemRangeRemoved(...);
-   *** onStateRestorationPolicyChanged(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$AdapterDataObserver
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$AdapterDataObserver {
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$ChildDrawingOrderCallback
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$ChildDrawingOrderCallback {
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$EdgeEffectFactory
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$EdgeEffectFactory {
-   <init>(...);
-   *** createEdgeEffect(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$ItemAnimator$ItemAnimatorFinishedListener
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$ItemAnimator$ItemAnimatorFinishedListener {
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$ItemAnimator$ItemHolderInfo
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$ItemAnimator$ItemHolderInfo {
-   <init>(...);
-   *** setFrom(...);
-   *** setFrom(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$ItemAnimator
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$ItemAnimator {
-   <init>(...);
-   *** getAddDuration(...);
-   *** setAddDuration(...);
-   *** getChangeDuration(...);
-   *** setChangeDuration(...);
-   *** isRunning(...);
-   *** getMoveDuration(...);
-   *** setMoveDuration(...);
-   *** getRemoveDuration(...);
-   *** setRemoveDuration(...);
-   *** animateAppearance(...);
-   *** animateChange(...);
-   *** animateDisappearance(...);
-   *** animatePersistence(...);
-   *** canReuseUpdatedViewHolder(...);
-   *** canReuseUpdatedViewHolder(...);
-   *** dispatchAnimationFinished(...);
-   *** dispatchAnimationStarted(...);
-   *** dispatchAnimationsFinished(...);
-   *** endAnimation(...);
-   *** endAnimations(...);
-   *** isRunning(...);
-   *** obtainHolderInfo(...);
-   *** onAnimationFinished(...);
-   *** onAnimationStarted(...);
-   *** recordPostLayoutInformation(...);
-   *** recordPreLayoutInformation(...);
-   *** runPendingAnimations(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$ItemAnimator
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$ItemAnimator {
-   *** isRunning(...);
-   *** animateAppearance(...);
-   *** animateChange(...);
-   *** animateDisappearance(...);
-   *** animatePersistence(...);
-   *** endAnimation(...);
-   *** endAnimations(...);
-   *** runPendingAnimations(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$ItemDecoration
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$ItemDecoration {
-   <init>(...);
-   *** getItemOffsets(...);
-   *** getItemOffsets(...);
-   *** onDraw(...);
-   *** onDraw(...);
-   *** onDrawOver(...);
-   *** onDrawOver(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$ItemDecoration
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$ItemDecoration {
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$LayoutManager$LayoutPrefetchRegistry
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$LayoutManager$LayoutPrefetchRegistry {
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$LayoutManager$Properties
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$LayoutManager$Properties {
-   <init>(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$LayoutManager
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$LayoutManager {
-   <init>(...);
-   *** isAutoMeasureEnabled(...);
-   *** setAutoMeasureEnabled(...);
-   *** getBaseline(...);
-   *** getChildCount(...);
-   *** getClipToPadding(...);
-   *** getFocusedChild(...);
-   *** hasFocus(...);
-   *** getHeight(...);
-   *** getHeightMode(...);
-   *** isAttachedToWindow(...);
-   *** isFocused(...);
-   *** isSmoothScrolling(...);
-   *** getItemCount(...);
-   *** isItemPrefetchEnabled(...);
-   *** setItemPrefetchEnabled(...);
-   *** getLayoutDirection(...);
-   *** isMeasurementCacheEnabled(...);
-   *** setMeasurementCacheEnabled(...);
-   *** getMinimumHeight(...);
-   *** getMinimumWidth(...);
-   *** getPaddingBottom(...);
-   *** getPaddingEnd(...);
-   *** getPaddingLeft(...);
-   *** getPaddingRight(...);
-   *** getPaddingStart(...);
-   *** getPaddingTop(...);
-   *** getWidth(...);
-   *** getWidthMode(...);
-   *** addDisappearingView(...);
-   *** addDisappearingView(...);
-   *** addView(...);
-   *** addView(...);
-   *** assertInLayoutOrScroll(...);
-   *** assertNotInLayoutOrScroll(...);
-   *** attachView(...);
-   *** attachView(...);
-   *** attachView(...);
-   *** calculateItemDecorationsForChild(...);
-   *** canScrollHorizontally(...);
-   *** canScrollVertically(...);
-   *** checkLayoutParams(...);
-   *** chooseSize(...);
-   *** collectAdjacentPrefetchPositions(...);
-   *** collectInitialPrefetchPositions(...);
-   *** computeHorizontalScrollExtent(...);
-   *** computeHorizontalScrollOffset(...);
-   *** computeHorizontalScrollRange(...);
-   *** computeVerticalScrollExtent(...);
-   *** computeVerticalScrollOffset(...);
-   *** computeVerticalScrollRange(...);
-   *** detachAndScrapAttachedViews(...);
-   *** detachAndScrapView(...);
-   *** detachAndScrapViewAt(...);
-   *** detachView(...);
-   *** detachViewAt(...);
-   *** endAnimation(...);
-   *** findContainingItemView(...);
-   *** findViewByPosition(...);
-   *** generateDefaultLayoutParams(...);
-   *** generateLayoutParams(...);
-   *** generateLayoutParams(...);
-   *** getBottomDecorationHeight(...);
-   *** getChildAt(...);
-   *** getChildMeasureSpec(...);
-   *** getChildMeasureSpec(...);
-   *** getColumnCountForAccessibility(...);
-   *** getDecoratedBottom(...);
-   *** getDecoratedBoundsWithMargins(...);
-   *** getDecoratedLeft(...);
-   *** getDecoratedMeasuredHeight(...);
-   *** getDecoratedMeasuredWidth(...);
-   *** getDecoratedRight(...);
-   *** getDecoratedTop(...);
-   *** getItemViewType(...);
-   *** getLeftDecorationWidth(...);
-   *** getPosition(...);
-   *** getProperties(...);
-   *** getRightDecorationWidth(...);
-   *** getRowCountForAccessibility(...);
-   *** getSelectionModeForAccessibility(...);
-   *** getTopDecorationHeight(...);
-   *** getTransformedBoundingBox(...);
-   *** ignoreView(...);
-   *** isLayoutHierarchical(...);
-   *** isViewPartiallyVisible(...);
-   *** layoutDecorated(...);
-   *** layoutDecoratedWithMargins(...);
-   *** measureChild(...);
-   *** measureChildWithMargins(...);
-   *** moveView(...);
-   *** offsetChildrenHorizontal(...);
-   *** offsetChildrenVertical(...);
-   *** onAdapterChanged(...);
-   *** onAddFocusables(...);
-   *** onAttachedToWindow(...);
-   *** onDetachedFromWindow(...);
-   *** onDetachedFromWindow(...);
-   *** onFocusSearchFailed(...);
-   *** onInitializeAccessibilityEvent(...);
-   *** onInitializeAccessibilityEvent(...);
-   *** onInitializeAccessibilityNodeInfo(...);
-   *** onInitializeAccessibilityNodeInfoForItem(...);
-   *** onInterceptFocusSearch(...);
-   *** onItemsAdded(...);
-   *** onItemsChanged(...);
-   *** onItemsMoved(...);
-   *** onItemsRemoved(...);
-   *** onItemsUpdated(...);
-   *** onItemsUpdated(...);
-   *** onLayoutChildren(...);
-   *** onLayoutCompleted(...);
-   *** onMeasure(...);
-   *** onRequestChildFocus(...);
-   *** onRequestChildFocus(...);
-   *** onRestoreInstanceState(...);
-   *** onSaveInstanceState(...);
-   *** onScrollStateChanged(...);
-   *** performAccessibilityAction(...);
-   *** performAccessibilityActionForItem(...);
-   *** postOnAnimation(...);
-   *** removeAllViews(...);
-   *** removeAndRecycleAllViews(...);
-   *** removeAndRecycleView(...);
-   *** removeAndRecycleViewAt(...);
-   *** removeCallbacks(...);
-   *** removeDetachedView(...);
-   *** removeView(...);
-   *** removeViewAt(...);
-   *** requestChildRectangleOnScreen(...);
-   *** requestChildRectangleOnScreen(...);
-   *** requestLayout(...);
-   *** requestSimpleAnimationsInNextLayout(...);
-   *** scrollHorizontallyBy(...);
-   *** scrollToPosition(...);
-   *** scrollVerticallyBy(...);
-   *** setMeasuredDimension(...);
-   *** setMeasuredDimension(...);
-   *** smoothScrollToPosition(...);
-   *** startSmoothScroll(...);
-   *** stopIgnoringView(...);
-   *** supportsPredictiveItemAnimations(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$LayoutManager
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$LayoutManager {
-   *** generateDefaultLayoutParams(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$LayoutParams
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$LayoutParams {
-   <init>(...);
-   <init>(...);
-   <init>(...);
-   <init>(...);
-   <init>(...);
-   *** getAbsoluteAdapterPosition(...);
-   *** getBindingAdapterPosition(...);
-   *** isItemChanged(...);
-   *** isItemRemoved(...);
-   *** isViewInvalid(...);
-   *** getViewAdapterPosition(...);
-   *** getViewLayoutPosition(...);
-   *** getViewPosition(...);
-   *** viewNeedsUpdate(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$OnChildAttachStateChangeListener
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$OnChildAttachStateChangeListener {
-}
-
--keep class mono.androidx.recyclerview.widget.RecyclerView_OnChildAttachStateChangeListenerImplementor
--keepclassmembers class mono.androidx.recyclerview.widget.RecyclerView_OnChildAttachStateChangeListenerImplementor {
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$OnFlingListener
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$OnFlingListener {
-   <init>(...);
-   *** onFling(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$OnFlingListener
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$OnFlingListener {
-   *** onFling(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$OnItemTouchListener
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$OnItemTouchListener {
-}
-
--keep class mono.androidx.recyclerview.widget.RecyclerView_OnItemTouchListenerImplementor
--keepclassmembers class mono.androidx.recyclerview.widget.RecyclerView_OnItemTouchListenerImplementor {
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$OnScrollListener
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$OnScrollListener {
-   <init>(...);
-   *** onScrollStateChanged(...);
-   *** onScrolled(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$OnScrollListener
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$OnScrollListener {
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$RecycledViewPool
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$RecycledViewPool {
-   <init>(...);
-   *** clear(...);
-   *** getRecycledView(...);
-   *** getRecycledViewCount(...);
-   *** putRecycledView(...);
-   *** setMaxRecycledViews(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$Recycler
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$Recycler {
-   <init>(...);
-   *** getScrapList(...);
-   *** bindViewToPosition(...);
-   *** clear(...);
-   *** convertPreLayoutPositionToPostLayout(...);
-   *** getViewForPosition(...);
-   *** recycleView(...);
-   *** setViewCacheSize(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$RecyclerListener
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$RecyclerListener {
-}
-
--keep class mono.androidx.recyclerview.widget.RecyclerView_RecyclerListenerImplementor
--keepclassmembers class mono.androidx.recyclerview.widget.RecyclerView_RecyclerListenerImplementor {
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$SmoothScroller$Action
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$SmoothScroller$Action {
-   <init>(...);
-   <init>(...);
-   <init>(...);
-   *** getDuration(...);
-   *** setDuration(...);
-   *** getDx(...);
-   *** setDx(...);
-   *** getDy(...);
-   *** setDy(...);
-   *** getInterpolator(...);
-   *** setInterpolator(...);
-   *** jumpTo(...);
-   *** update(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$SmoothScroller
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$SmoothScroller {
-   <init>(...);
-   *** getChildCount(...);
-   *** isPendingInitialRun(...);
-   *** isRunning(...);
-   *** getLayoutManager(...);
-   *** getTargetPosition(...);
-   *** setTargetPosition(...);
-   *** computeScrollVectorForPosition(...);
-   *** findViewByPosition(...);
-   *** getChildPosition(...);
-   *** instantScrollToPosition(...);
-   *** normalize(...);
-   *** onChildAttachedToWindow(...);
-   *** onSeekTargetStep(...);
-   *** onStart(...);
-   *** onStop(...);
-   *** onTargetFound(...);
-   *** stop(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$SmoothScroller
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$SmoothScroller {
-   *** onSeekTargetStep(...);
-   *** onStart(...);
-   *** onStop(...);
-   *** onTargetFound(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$State
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$State {
-   <init>(...);
-   *** hasTargetScrollPosition(...);
-   *** isMeasuring(...);
-   *** isPreLayout(...);
-   *** getItemCount(...);
-   *** getRemainingScrollHorizontal(...);
-   *** getRemainingScrollVertical(...);
-   *** getTargetScrollPosition(...);
-   *** didStructureChange(...);
-   *** get(...);
-   *** put(...);
-   *** remove(...);
-   *** willRunPredictiveAnimations(...);
-   *** willRunSimpleAnimations(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$ViewCacheExtension
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$ViewCacheExtension {
-   <init>(...);
-   *** getViewForPositionAndType(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$ViewCacheExtension
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$ViewCacheExtension {
-   *** getViewForPositionAndType(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$ViewHolder
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$ViewHolder {
-   <init>(...);
-   *** getAbsoluteAdapterPosition(...);
-   *** getAdapterPosition(...);
-   *** getBindingAdapter(...);
-   *** getBindingAdapterPosition(...);
-   *** isRecyclable(...);
-   *** setIsRecyclable(...);
-   *** getItemId(...);
-   *** getItemViewType(...);
-   *** getLayoutPosition(...);
-   *** getOldPosition(...);
-   *** getPosition(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerView$ViewHolder
--keepclassmembers class androidx.recyclerview.widget.RecyclerView$ViewHolder {
-}
-
--keep class androidx.recyclerview.widget.RecyclerView
--keepclassmembers class androidx.recyclerview.widget.RecyclerView {
-   <init>(...);
-   <init>(...);
-   <init>(...);
-   *** getCompatAccessibilityDelegate(...);
-   *** hasFixedSize(...);
-   *** setHasFixedSize(...);
-   *** hasPendingAdapterUpdates(...);
-   *** isAnimating(...);
-   *** isComputingLayout(...);
-   *** isLayoutSuppressed(...);
-   *** getItemDecorationCount(...);
-   *** isLayoutFrozen(...);
-   *** setLayoutFrozen(...);
-   *** getMaxFlingVelocity(...);
-   *** getMinFlingVelocity(...);
-   *** getPreserveFocusAfterLayout(...);
-   *** setPreserveFocusAfterLayout(...);
-   *** getScrollState(...);
-   *** addFocusables(...);
-   *** addItemDecoration(...);
-   *** addItemDecoration(...);
-   *** addOnChildAttachStateChangeListener(...);
-   *** addOnItemTouchListener(...);
-   *** addOnScrollListener(...);
-   *** addRecyclerListener(...);
-   *** clearOnChildAttachStateChangeListeners(...);
-   *** clearOnScrollListeners(...);
-   *** computeHorizontalScrollExtent(...);
-   *** computeHorizontalScrollOffset(...);
-   *** computeHorizontalScrollRange(...);
-   *** computeVerticalScrollExtent(...);
-   *** computeVerticalScrollOffset(...);
-   *** computeVerticalScrollRange(...);
-   *** dispatchNestedPreScroll(...);
-   *** dispatchNestedScroll(...);
-   *** dispatchNestedScroll(...);
-   *** dispatchRestoreInstanceState(...);
-   *** dispatchSaveInstanceState(...);
-   *** drawChild(...);
-   *** findChildViewUnder(...);
-   *** findContainingItemView(...);
-   *** findContainingViewHolder(...);
-   *** findViewHolderForAdapterPosition(...);
-   *** findViewHolderForItemId(...);
-   *** findViewHolderForLayoutPosition(...);
-   *** findViewHolderForPosition(...);
-   *** fling(...);
-   *** getAdapter(...);
-   *** getChildAdapterPosition(...);
-   *** getChildItemId(...);
-   *** getChildLayoutPosition(...);
-   *** getChildPosition(...);
-   *** getChildViewHolder(...);
-   *** getDecoratedBoundsWithMargins(...);
-   *** getEdgeEffectFactory(...);
-   *** getItemAnimator(...);
-   *** getItemDecorationAt(...);
-   *** getLayoutManager(...);
-   *** getOnFlingListener(...);
-   *** getRecycledViewPool(...);
-   *** hasNestedScrollingParent(...);
-   *** invalidateItemDecorations(...);
-   *** nestedScrollBy(...);
-   *** offsetChildrenHorizontal(...);
-   *** offsetChildrenVertical(...);
-   *** onChildAttachedToWindow(...);
-   *** onChildDetachedFromWindow(...);
-   *** onDraw(...);
-   *** onLayout(...);
-   *** onScrollStateChanged(...);
-   *** onScrolled(...);
-   *** removeItemDecoration(...);
-   *** removeItemDecorationAt(...);
-   *** removeOnChildAttachStateChangeListener(...);
-   *** removeOnItemTouchListener(...);
-   *** removeOnScrollListener(...);
-   *** removeRecyclerListener(...);
-   *** scrollToPosition(...);
-   *** setAccessibilityDelegateCompat(...);
-   *** setAdapter(...);
-   *** setChildDrawingOrderCallback(...);
-   *** setDebugAssertionsEnabled(...);
-   *** setEdgeEffectFactory(...);
-   *** setItemAnimator(...);
-   *** setItemViewCacheSize(...);
-   *** setLayoutManager(...);
-   *** setOnFlingListener(...);
-   *** setOnScrollListener(...);
-   *** setRecycledViewPool(...);
-   *** setRecyclerListener(...);
-   *** setScrollingTouchSlop(...);
-   *** setVerboseLoggingEnabled(...);
-   *** setViewCacheExtension(...);
-   *** smoothScrollBy(...);
-   *** smoothScrollBy(...);
-   *** smoothScrollBy(...);
-   *** smoothScrollToPosition(...);
-   *** startNestedScroll(...);
-   *** stopNestedScroll(...);
-   *** stopScroll(...);
-   *** suppressLayout(...);
-   *** swapAdapter(...);
-}
-
--keep class androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate
--keepclassmembers class androidx.recyclerview.widget.RecyclerViewAccessibilityDelegate {
-   <init>(...);
-   *** getItemDelegate(...);
 }
 
 # ACW for Xamarin.AndroidX.Lifecycle.Common
@@ -8728,7 +8728,9 @@
 -keep class crc645b7583d1cb05319f.ColorThemeListPreference { *; }
 -keep class crc645b7583d1cb05319f.MainActivity { *; }
 -keep class crc645b7583d1cb05319f.NavigationGraph8ApplicationNet8 { *; }
+-keep class crc645b7583d1cb05319f.SimpleItemDecoration { *; }
 -keep class crc645b7583d1cb05319f.SystemThemeListPreference { *; }
+-keep class crc641b0f1e4458844c38.BooksFragment { *; }
 -keep class crc641b0f1e4458844c38.GalleryFragment { *; }
 -keep class crc641b0f1e4458844c38.HomeFragment { *; }
 -keep class crc641b0f1e4458844c38.ImmersiveFragment { *; }
@@ -8748,6 +8750,8 @@
 -keep class crc641b0f1e4458844c38.SlideshowFragment { *; }
 -keep class crc647b9b88425b4d5e7a.BasicDialogFragment { *; }
 -keep class crc647b9b88425b4d5e7a.HelperExplanationDialogFragment { *; }
+-keep class crc6466c7a519bc75f969.BookAdapter { *; }
+-keep class crc6466c7a519bc75f969.BookAdapter_BookViewHolder { *; }
 -keep class crc6466c7a519bc75f969.LeaderboardViewPagerStateAdapter { *; }
 
 # End of content from obj\Release\net8.0-android\proguard\proguard_project_primary.cfg
@@ -9701,14 +9705,14 @@
 # Referenced at res/layout/abc_popup_menu_item_layout.xml:17
 -keep class androidx.appcompat.view.menu.ListMenuItemView { <init>(...); }
 
-# Referenced at res/layout/abc_screen_toolbar.xml:27
+# Referenced at res/layout-v26/abc_screen_toolbar.xml:27
 -keep class androidx.appcompat.widget.ActionBarContainer { <init>(...); }
 
 # Referenced at res/layout/abc_action_mode_bar.xml:19
-# Referenced at res/layout/abc_screen_toolbar.xml:43
+# Referenced at res/layout-v26/abc_screen_toolbar.xml:44
 -keep class androidx.appcompat.widget.ActionBarContextView { <init>(...); }
 
-# Referenced at res/layout/abc_screen_toolbar.xml:17
+# Referenced at res/layout-v26/abc_screen_toolbar.xml:17
 -keep class androidx.appcompat.widget.ActionBarOverlayLayout { <init>(...); }
 
 # Referenced at res/layout/abc_action_menu_layout.xml:17
@@ -9751,7 +9755,7 @@
 # Referenced at res/layout/preference_widget_switch_compat.xml:20
 -keep class androidx.appcompat.widget.SwitchCompat { <init>(...); }
 
-# Referenced at res/layout/abc_screen_toolbar.xml:36
+# Referenced at res/layout-v26/abc_screen_toolbar.xml:37
 -keep class androidx.appcompat.widget.Toolbar { <init>(...); }
 
 # Referenced at res/layout/abc_screen_simple.xml:25
@@ -9764,7 +9768,9 @@
 # Referenced at res/layout/material_timepicker_dialog.xml:38
 -keep class androidx.constraintlayout.widget.Barrier { <init>(...); }
 
+# Referenced at C:\ProjectsVS2022Preview\NavigationGraph8Net8\obj\Release\net8.0-android\res\layout\book_item.xml:1
 # Referenced at C:\ProjectsVS2022Preview\NavigationGraph8Net8\obj\Release\net8.0-android\res\layout\content_main.xml:1
+# Referenced at C:\ProjectsVS2022Preview\NavigationGraph8Net8\obj\Release\net8.0-android\res\layout\fragment_books.xml:1
 # Referenced at C:\ProjectsVS2022Preview\NavigationGraph8Net8\obj\Release\net8.0-android\res\layout\fragment_gallery.xml:1
 # Referenced at C:\ProjectsVS2022Preview\NavigationGraph8Net8\obj\Release\net8.0-android\res\layout\fragment_home.xml:1
 # Referenced at C:\ProjectsVS2022Preview\NavigationGraph8Net8\obj\Release\net8.0-android\res\layout\fragment_leaderboard.xml:1
@@ -9825,6 +9831,7 @@
 # Referenced at res/layout/preference_dropdown.xml:39
 -keep class androidx.preference.internal.PreferenceImageView { <init>(...); }
 
+# Referenced at C:\ProjectsVS2022Preview\NavigationGraph8Net8\obj\Release\net8.0-android\res\layout\fragment_books.xml:1
 # Referenced at C:\ProjectsVS2022Preview\NavigationGraph8Net8\obj\Release\net8.0-android\res\layout\fragment_maintenance_file_selection.xml:1
 # Referenced at res/layout/mtrl_calendar_horizontal.xml:29
 # Referenced at res/layout/mtrl_calendar_months.xml:18
@@ -9862,7 +9869,7 @@
 # Referenced at res/layout/material_time_chip.xml:17
 -keep class com.google.android.material.chip.Chip { <init>(...); }
 
-# Referenced at res/layout/mtrl_calendar_month.xml:18
+# Referenced at res/layout-v26/mtrl_calendar_month.xml:18
 -keep class com.google.android.material.datepicker.MaterialCalendarGridView { <init>(...); }
 
 # Referenced at C:\ProjectsVS2022Preview\NavigationGraph8Net8\obj\Release\net8.0-android\res\layout\fragment_widgets.xml:1
@@ -9928,6 +9935,9 @@
 
 # Referenced at res/layout/material_timepicker_dialog.xml:46
 -keep class com.google.android.material.timepicker.TimePickerView { <init>(...); }
+
+# Referenced at C:\ProjectsVS2022Preview\NavigationGraph8Net8\obj\Release\net8.0-android\res\navigation\nav_graph.xml:1
+-keep class crc641b0f1e4458844c38.BooksFragment { <init>(...); }
 
 # Referenced at C:\ProjectsVS2022Preview\NavigationGraph8Net8\obj\Release\net8.0-android\res\navigation\nav_graph.xml:1
 -keep class crc641b0f1e4458844c38.GalleryFragment { <init>(...); }

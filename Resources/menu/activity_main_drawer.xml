@@ -12,6 +12,10 @@
             android:id="@+id/gallery_fragment"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/title_gallery" />
+		<item
+            android:id="@+id/books_fragment"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/title_books" />
         <item
             android:id="@+id/slideshow_fragment"
             android:icon="@drawable/ic_menu_slideshow"

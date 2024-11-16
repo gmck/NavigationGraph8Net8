@@ -1,5 +1,10 @@
 ﻿# NavigationGraph8Net8 net8.0-android34
 
+Update Nov 16 2024
+
+Added the BookFragment code from the NavigationGraph9Net9 project as a test, to see if this project requires the new function IsGestureNavigation(). Result it doesn't, NavigationGraph9Net9 does.
+
+
 Readme for NavigationGraph8Net8 - 4 October, 2023.
 
 Update: March 2, 2024

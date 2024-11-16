@@ -16,6 +16,11 @@
         android:name="com.companyname.navigationgraph8net8.fragments.GalleryFragment"
         android:label="@string/label_gallery"/>
 
+	<fragment
+        android:id="@+id/books_fragment"
+        android:name="com.companyname.navigationgraph8net8.fragments.BooksFragment"
+        android:label="@string/label_books"/>
+	
     <fragment
         android:id="@+id/slideshow_fragment"
         android:name="com.companyname.navigationgraph8net8.fragments.SlideshowFragment"

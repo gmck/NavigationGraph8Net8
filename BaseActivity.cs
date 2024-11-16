@@ -45,7 +45,7 @@ namespace com.companyname.navigationgraph8net8
             sharedPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
 
             // colorThemeValue defaults to RedBmw
-            requestedColorTheme = sharedPreferences!.GetString("colorThemeValue", "1");
+            requestedColorTheme = sharedPreferences!.GetString("colorThemeValue", "3");
             useDynamicColors = sharedPreferences.GetBoolean("use_dynamic_colors", false);
             useTransparentStatusBar = sharedPreferences.GetBoolean("use_transparent_statusbar", false);
 
