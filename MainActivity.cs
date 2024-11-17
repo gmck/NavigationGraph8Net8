@@ -324,10 +324,24 @@ namespace com.companyname.navigationgraph8net8
         #region OnDestinationChanged
         public void OnDestinationChanged(NavController navController, NavDestination navDestination, Bundle? bundle)
         {
+            // OnDestinationChanged event is called very early in the start process - therefore it is an ideal time to check for preference changes.
+            // The order of events when using the NavigationComponent is maybe not what you'd expect as compared to apps with multiple activities.
+
+            // The Order of events is:
+            // MainActivity's OnCreate
+            // HomeFragment Ctor
+            // MainActivity's OnDestinationChanged
+            // MainActivity's OnStart
+            // HomeFragment's OnCreateView 
+            // HomeFragment's OnViewCreated
+            // HomeFragment's OnStart
+            // MainActivity's OnResume
+            // HomeFragment's OnResume
+
             // Seems to be a bug in NavigationView. The first menu item is not checked by default
             // Therefore, the first fix was to manually check it as below.
             // navigationView!.Menu!.FindItem(Resource.Id.home_fragment)!.SetChecked(navDestination.Id == Resource.Id.home_fragment);
-            
+
             // At other times a menu item of the NavigationView is checked when it shouldn't, so it is possible to get two menu items checked at the same time
             // The safest way to handle this is to uncheck all menu items and then check the one we want.
             UnCheckAllMenuItems();
